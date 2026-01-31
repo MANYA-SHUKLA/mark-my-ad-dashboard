@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --dark-purple: #2b1e7b;
+  --hover-purple: #3b2a9f;
+  --light-purple-accent: #6c63ff;
+  --orange-from: #ff8a4c;
+  --orange-to: #ff6a3d;
+  --outline-border: #e5e7eb;
+  --main-bg: #f6f7fb;
+  --card-white: #ffffff;
+  --borders: #e6e8f0;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --status-green: #22c55e;
+  --status-orange: #fb923c;
+  --status-purple: #8b5cf6;
+}
+
+@theme inline {
+  --color-dark-purple: var(--dark-purple);
+  --color-hover-purple: var(--hover-purple);
+  --color-light-purple-accent: var(--light-purple-accent);
+  --color-main-bg: var(--main-bg);
+  --color-card-white: var(--card-white);
+  --color-borders: var(--borders);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-poppins);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineSlide {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+.animate-underline-slide {
+  transform-origin: left;
+  animation: underlineSlide 0.25s ease-out forwards;
+}
+
+.shadow-xs {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
